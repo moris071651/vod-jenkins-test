@@ -33,9 +33,6 @@ pipeline {
     }
 
     post {
-        always {
-            junit '**/test-results.xml' // Optional: if you're capturing results
-        }
         success {
             echo 'Tests passed!'
         }
@@ -44,5 +41,3 @@ pipeline {
         }
     }
 }
-
-
