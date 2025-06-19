@@ -4,7 +4,7 @@ pipeline {
             image 'python:3.10-slim'
         }
     }
-    
+
     triggers {
         githubPush() // only trigger on GitHub push
     }
@@ -18,7 +18,6 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'apt install python3'
                 sh 'python3 -m venv venv'
                 sh './venv/bin/pip install --upgrade pip'
                 sh './venv/bin/pip install -r requirements.txt'
