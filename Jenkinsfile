@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:slim'
-        }
-    }
+    agent any
 
     triggers {
         githubPush() // only trigger on GitHub push
