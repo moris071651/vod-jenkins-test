@@ -1,12 +1,12 @@
 pipeline {
-    triggers {
-        githubPush() // only trigger on GitHub push
-    }
-
     agent {
         docker {
             image 'python:slim'
         }
+    }
+
+    triggers {
+        githubPush() // only trigger on GitHub push
     }
 
     stages {
