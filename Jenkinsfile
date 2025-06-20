@@ -9,6 +9,8 @@ pipeline {
         githubPush() // only trigger on GitHub push
     }
 
+    
+
     stages {
         stage('Checkout') {
             steps {
@@ -23,7 +25,7 @@ pipeline {
                 sh './venv/bin/pip install -r requirements.txt'
                 sh './venv/bin/pip install pytest'
             }
-            
+
         }
 
         stage('Run tests') {
