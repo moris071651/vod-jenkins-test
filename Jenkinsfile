@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.11'
+            image 'python:3.10-slim'
         }
     }
 
@@ -23,7 +23,6 @@ pipeline {
                 sh './venv/bin/pip install -r requirements.txt'
                 sh './venv/bin/pip install pytest'
             }
-
         }
 
         stage('Run tests') {
