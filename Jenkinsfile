@@ -6,10 +6,8 @@ pipeline {
     }
 
     triggers {
-        githubPush() // only trigger on GitHub push
+        githubPush()
     }
-
-    
 
     stages {
         stage('Checkout') {
