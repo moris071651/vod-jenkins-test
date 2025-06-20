@@ -23,6 +23,7 @@ pipeline {
                 sh './venv/bin/pip install -r requirements.txt'
                 sh './venv/bin/pip install pytest'
             }
+            
         }
 
         stage('Run tests') {
